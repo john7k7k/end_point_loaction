@@ -1,0 +1,60 @@
+@baseUrl = http://localhost:3000/api/detections
+@id =
+
+###
+
+# 建立 Detection
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "operationId": "699ad89e5b57fb73768b08cc",
+    "timestamp": "2025-05-20T10:30:00Z",
+    "objectClass": "person_001",
+    "sensors": [
+        {
+            "timestamp": "2025-05-20T10:30:00Z",
+            "imu": false,
+            "acceleration": {
+                "x": 2.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "gyroscope":  {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "devicePosition":  {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        }
+    ]
+}
+
+
+###
+
+# 取得operation 的全部 detections
+
+GET {{baseUrl}}/699ad89e5b57fb73768b08cc
+
+###
+
+# 更新 detection
+
+PATCH {{baseUrl}}/699ad8b95b57fb73768b08ce
+Content-Type: application/json
+
+{
+"objectClass": "person_003"
+}
+
+###
+
+# 刪除 detection
+
+DELETE {{baseUrl}}/699ad8b95b57fb73768b08ce

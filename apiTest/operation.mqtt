@@ -1,0 +1,15 @@
+
+# %%
+url: mqtt://localhost:1883
+
+# ##
+topic: vision/operation
+qos: 0
+retain: false
+
+{ 
+    "userId": "699ad81b5b57fb73768b08bd",
+    "startTime": "2025-05-20T10:00:00Z",
+    "endTime": "2025-05-21T10:00:00Z",
+    "description": "Operation description 33"
+}

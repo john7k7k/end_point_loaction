@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:3000/api/users
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john2.doe@example.com",
+    "passwordHash": "hashed_password_123"
+}
+
+###
+GET {{baseUrl}}
+###
+GET {{baseUrl}}/699b11ed9ff0a577f06c9170
+
+###
+PATCH {{baseUrl}}/699b11ed9ff0a577f06c9170
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john8.doe@example.com",
+    "passwordHash": "hashed_password_123"
+}
+###
+DELETE {{baseUrl}}/699b11ed9ff0a577f06c9170

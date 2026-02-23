@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:3000/api/operations
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{ 
+    "userId": "699ad81b5b57fb73768b08bd",
+    "startTime": "2025-05-20T10:00:00Z",
+    "endTime": "2025-05-21T10:00:00Z",
+    "description": "Operation description example"
+}
+
+###
+GET {{baseUrl}}/699b39834527e04ca830def4
+###
+GET {{baseUrl}}/user/699ad81b5b57fb73768b08bd
+
+###
+PATCH {{baseUrl}}/699b38954527e04ca830dee7
+Content-Type: application/json
+
+{ 
+    "description": "Operation 4"
+}
+###
+DELETE {{baseUrl}}/699b38db4527e04ca830deeb
