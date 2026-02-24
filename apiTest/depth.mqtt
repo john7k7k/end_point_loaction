@@ -1,0 +1,27 @@
+Schema:
+{
+    "Box的左上角x座標,左上角y座標,右下角x座標,右下角y座標":{
+        "lenth": 螺絲長度,
+        "width": 螺絲寬度,
+        "depth": 平均深度
+    }
+}
+
+範例：
+
+# %%
+url: mqtt://192.168.123.113
+
+# ##
+topic: vision/depth
+qos: 0
+retain: false
+
+{ 
+    "10,150,30,160": {
+        "lenth": 35.1,
+        "width": 4.2,
+        "depth": 11.5
+    }
+}
+

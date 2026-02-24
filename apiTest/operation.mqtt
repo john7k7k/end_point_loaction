@@ -1,6 +1,6 @@
 
 # %%
-url: mqtt://localhost:1883
+url: mqtt://192.168.123.113
 
 # ##
 topic: vision/operation
