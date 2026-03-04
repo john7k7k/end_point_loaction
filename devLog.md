@@ -102,6 +102,10 @@ mosquitto_sub -h localhost -t test
 ```
 mosquitto_pub -h localhost -t test -m "Hello MQTT"
 ```
+4. 虛擬網卡NET
+```
+netsh interface portproxy add v4tov4 listenaddress=192.168.123.113 listenport=1883 connectaddress=172.23.63.121 connectport=1883
+```
 ### 啟動nodejs
 1. 安裝nvm
 ```

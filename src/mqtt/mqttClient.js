@@ -26,10 +26,11 @@ client.on("message", async (topic, message) => {
     if (topic === "vision/operation/start") {
       const op = await Operation.create(data);
       console.log("operation start saved:", op._id);
-      client.publish(`vision/operation/ack/${op.userId}`, JSON.stringify({ operationId: op._id }));
+      client.publish(`vision/operation/ack/${op.userId}`, JSON.stringify({ opID: op._id }));
+      console.log(`pub vision/operation/ack/${op.userId}`);
     } else if (topic === "vision/operation/end") {
-      const op = await Operation.findByIdAndUpdate(data.operationId, { endTime: data.endTime });
-      console.log("operation end", op._id);
+      const op = await Operation.findByIdAndUpdate(data.opID, { endTime: data.endTime });
+      console.log("operation end", data.opID, data.endTime);
     }
   } catch (err) {
     console.error("MQTT parse error", err);

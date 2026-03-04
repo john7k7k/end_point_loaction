@@ -9,7 +9,18 @@ retain: false
 
 { 
     "userId": "699ad81b5b57fb73768b08bd",
-    "startTime": "2025-05-20T10:00:00Z",
-    "endTime": "2025-05-21T10:00:00Z",
-    "description": "Operation description 33"
+    "startTime": "2025-05-20T10:00:00Z"
+}
+
+# $$
+vision/operation/ack/699ad81b5b57fb73768b08bd
+
+# ##
+topic: vision/operation/end
+qos: 0
+retain: false
+
+{ 
+    "opID": "69a7ecce382268d37ac86955",
+    "endTime": "2025-05-20T10:00:00Z"
 }
