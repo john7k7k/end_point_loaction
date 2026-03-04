@@ -1,0 +1,35 @@
+# %%
+url: mqtt://localhost:1883
+
+
+# ##
+topic: vision/detection
+qos: 0
+retain: false
+
+{
+    "operationId": "699ad89e5b57fb73768b08cc",
+    "timestamp": "2025-05-20T10:30:00Z",
+    "objectClass": "person_001",
+    "sensors": [
+        {
+            "timestamp": "2025-05-20T10:30:00Z",
+            "imu": false,
+            "acceleration": {
+                "x": 2.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "gyroscope":  {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "devicePosition":  {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 17.0
+            }
+        }
+    ]
+}

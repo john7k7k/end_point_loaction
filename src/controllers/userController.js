@@ -1,7 +1,9 @@
 import User from "../models/User.js";
+import mqttClient from "../mqtt/mqttClient.js";
 
 export const createUser = async (req, res) => {
   const user = await User.create(req.body);
+  mqttClient.subscribe(`vision/operation/ack/${user._id}`);
   res.json(user);
 };
 
